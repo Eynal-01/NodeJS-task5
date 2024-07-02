@@ -16,16 +16,6 @@ exports.checkId = (req, res, next, val) => {
     next();
 };
 
-// exports.checkBody = (req, res, next) => {
-//     if (!req.body.name || !req.body.surname || !req.body.score) {
-//         return res.status(400).json({
-//             status: "fail",
-//             message: "Missing name or surname"
-//         });
-//     }
-//     next();
-// };
-
 exports.checkBody = (req, res, next) => {
     if (req.method === "POST") {
         if (!req.body.name || !req.body.surname || !req.body.score) {
